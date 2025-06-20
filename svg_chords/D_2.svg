@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Creator: CorelDRAW Standard 2024 -->
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="40.8314mm" height="56.0924mm" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+viewBox="0 0 451.44 620.17"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ xmlns:xodm="http://www.corel.com/coreldraw/odm/2003">
+ <defs>
+  <font id="FontID1" horiz-adv-x="662" font-variant="normal" style="fill-rule:nonzero" font-style="normal" font-weight="400">
+	<font-face 
+		font-family="Futura Md BT">
+		<font-face-src>
+			<font-face-name name="Futura Md BT Medium"/>
+		</font-face-src>
+	</font-face>
+   <missing-glyph><path d="M0 0z"/></missing-glyph>
+   <glyph unicode="7" horiz-adv-x="604" d="M111.669 15.1654l292.157 600.835 -330.819 0 0 92 492.992 0 -360.173 -735.008 -94.1575 42.1732z"/>
+   <glyph unicode="D" horiz-adv-x="740" d="M198 104.999l97.8308 0c53.6655,0 94.0045,3.50112 120.837,10.6694 26.9988,7.16139 50.3304,19.3323 70.1678,36.1668 26.9988,23.1655 47.3275,51.8319 60.8338,86.3311 13.4994,34.3332 20.3287,74.3332 20.3287,119.834 0,45.6668 -6.82927,85.5008 -20.3287,119.834 -13.5063,34.4992 -33.835,63.1655 -60.8338,86.3311 -20.1695,16.8345 -44.3383,28.9984 -72.4996,36.1668 -28.1681,7.16831 -72.3335,10.6694 -132.337,10.6694l-41.9997 0 -41.9997 0 0 -506.002zm-116.001 -104.999l0 714.997 156.499 0c102.003,0 173.665,-5.16174 215.333,-15.333 41.5015,-10.3304 77.8343,-27.497 109.171,-51.4997 41.3285,-31.6623 72.6656,-72.1674 93.9976,-121.668 21.3319,-49.5001 32.0014,-105.996 32.0014,-169.5 0,-63.4977 -10.6694,-119.661 -32.0014,-168.663 -21.3319,-49.0019 -52.6691,-89.5001 -93.9976,-121.501 -31.3371,-24.0028 -66.8396,-41.1693 -106.84,-51.4997 -39.827,-10.1643 -101.996,-15.333 -186.328,-15.333l-31.3371 0 -156.499 0z"/>
+  </font>
+  <font id="FontID0" horiz-adv-x="666" font-variant="normal" style="fill-rule:nonzero" font-style="normal" font-weight="400">
+	<font-face 
+		font-family="Arial">
+		<font-face-src>
+			<font-face-name name="Arial"/>
+		</font-face-src>
+	</font-face>
+   <missing-glyph><path d="M0 0z"/></missing-glyph>
+   <glyph unicode="X" horiz-adv-x="666" d="M4.32972 0l276.678 371.509 -243.68 344.498 112.831 0 130.5 -183.175c27.1759,-37.991 46.0056,-66.9909 56.8391,-87.1656 16.1766,25.0018 35.1721,51.6619 57.0049,79.8327l142.991 190.508 103.84 0 -248.673 -340.335 267.669 -375.672 -116.331 0 -180.669 255.325c-10.3361,14.5 -20.1562,28.9999 -29.4974,43.3341 -15.8265,-23.9885 -27.1575,-40.8284 -34.3246,-50.3169l-181.332 -248.342 -113.844 0z"/>
+  </font>
+  <style type="text/css">
+   <![CDATA[
+    @font-face { font-family:"Futura Md BT";font-variant:normal;font-style:normal;font-weight:normal;src:url("#FontID1") format(svg)}
+    @font-face { font-family:"Arial";font-variant:normal;font-style:normal;font-weight:normal;src:url("#FontID0") format(svg)}
+    .str0 {stroke:black;stroke-width:1.95;stroke-miterlimit:2.61313}
+    .fil0 {fill:none}
+    .fil2 {fill:black}
+    .fil1 {fill:black}
+    .fnt0 {font-weight:normal;font-size:60.01px;font-family:'Arial'}
+    .fnt2 {font-weight:normal;font-size:60.01px;font-family:'Arial'}
+    .fnt3 {font-weight:normal;font-size:70.21px;font-family:'Futura Md BT'}
+    .fnt1 {font-weight:normal;font-size:159.79px;font-family:'Futura Md BT'}
+   ]]>
+  </style>
+      <clipPath id="id0">
+       <path d="M19.68 220.5l75.12 0 0 79.54 -75.12 0 0 -79.54z"/>
+      </clipPath>
+      <clipPath id="id1">
+       <path d="M94.81 220.5l75.12 0 0 79.54 -75.12 0 0 -79.54z"/>
+      </clipPath>
+      <clipPath id="id2">
+       <path d="M169.93 220.5l75.12 0 0 79.54 -75.12 0 0 -79.54z"/>
+      </clipPath>
+      <clipPath id="id3">
+       <path d="M245.05 220.5l75.12 0 0 79.54 -75.12 0 0 -79.54z"/>
+      </clipPath>
+      <clipPath id="id4">
+       <path d="M320.18 220.5l75.12 0 0 79.54 -75.12 0 0 -79.54z"/>
+      </clipPath>
+      <clipPath id="id5">
+       <path d="M19.68 300.04l75.12 0 0 79.54 -75.12 0 0 -79.54z"/>
+      </clipPath>
+      <clipPath id="id6">
+       <path d="M94.81 300.04l75.12 0 0 79.54 -75.12 0 0 -79.54z"/>
+      </clipPath>
+      <clipPath id="id7">
+       <path d="M169.93 300.04l75.12 0 0 79.54 -75.12 0 0 -79.54z"/>
+      </clipPath>
+      <clipPath id="id8">
+       <path d="M245.05 300.04l75.12 0 0 79.54 -75.12 0 0 -79.54z"/>
+      </clipPath>
+      <clipPath id="id9">
+       <path d="M320.18 300.04l75.12 0 0 79.54 -75.12 0 0 -79.54z"/>
+      </clipPath>
+      <clipPath id="id10">
+       <path d="M19.68 379.58l75.12 0 0 79.54 -75.12 0 0 -79.54z"/>
+      </clipPath>
+      <clipPath id="id11">
+       <path d="M94.81 379.58l75.12 0 0 79.54 -75.12 0 0 -79.54z"/>
+      </clipPath>
+      <clipPath id="id12">
+       <path d="M169.93 379.58l75.12 0 0 79.54 -75.12 0 0 -79.54z"/>
+      </clipPath>
+      <clipPath id="id13">
+       <path d="M245.05 379.58l75.12 0 0 79.54 -75.12 0 0 -79.54z"/>
+      </clipPath>
+      <clipPath id="id14">
+       <path d="M320.18 379.58l75.12 0 0 79.54 -75.12 0 0 -79.54z"/>
+      </clipPath>
+      <clipPath id="id15">
+       <path d="M19.68 459.13l75.12 0 0 79.54 -75.12 0 0 -79.54z"/>
+      </clipPath>
+      <clipPath id="id16">
+       <path d="M94.81 459.13l75.12 0 0 79.54 -75.12 0 0 -79.54z"/>
+      </clipPath>
+      <clipPath id="id17">
+       <path d="M169.93 459.13l75.12 0 0 79.54 -75.12 0 0 -79.54z"/>
+      </clipPath>
+      <clipPath id="id18">
+       <path d="M245.05 459.13l75.12 0 0 79.54 -75.12 0 0 -79.54z"/>
+      </clipPath>
+      <clipPath id="id19">
+       <path d="M320.18 459.13l75.12 0 0 79.54 -75.12 0 0 -79.54z"/>
+      </clipPath>
+      <clipPath id="id20">
+       <path d="M19.68 538.67l75.12 0 0 79.54 -75.12 0 0 -79.54z"/>
+      </clipPath>
+      <clipPath id="id21">
+       <path d="M94.81 538.67l75.12 0 0 79.54 -75.12 0 0 -79.54z"/>
+      </clipPath>
+      <clipPath id="id22">
+       <path d="M169.93 538.67l75.12 0 0 79.54 -75.12 0 0 -79.54z"/>
+      </clipPath>
+      <clipPath id="id23">
+       <path d="M245.05 538.67l75.12 0 0 79.54 -75.12 0 0 -79.54z"/>
+      </clipPath>
+      <clipPath id="id24">
+       <path d="M320.18 538.67l75.12 0 0 79.54 -75.12 0 0 -79.54z"/>
+      </clipPath>
+ </defs>
+ <g id="Layer_x0020_1">
+  <metadata id="CorelCorpID_0Corel-Layer"/>
+  <g id="_2225406639552">
+   <g>
+    <g>
+    </g>
+    <g>
+     <g>
+     </g>
+     <g style="clip-path:url(#id0)">
+     </g>
+    </g>
+    <g>
+     <g>
+     </g>
+     <g style="clip-path:url(#id1)">
+     </g>
+    </g>
+    <g>
+     <g>
+     </g>
+     <g style="clip-path:url(#id2)">
+     </g>
+    </g>
+    <g>
+     <g>
+     </g>
+     <g style="clip-path:url(#id3)">
+     </g>
+    </g>
+    <g>
+     <g>
+     </g>
+     <g style="clip-path:url(#id4)">
+     </g>
+    </g>
+    <g>
+     <g>
+     </g>
+     <g style="clip-path:url(#id5)">
+     </g>
+    </g>
+    <g>
+     <g>
+     </g>
+     <g style="clip-path:url(#id6)">
+     </g>
+    </g>
+    <g>
+     <g>
+     </g>
+     <g style="clip-path:url(#id7)">
+     </g>
+    </g>
+    <g>
+     <g>
+     </g>
+     <g style="clip-path:url(#id8)">
+     </g>
+    </g>
+    <g>
+     <g>
+     </g>
+     <g style="clip-path:url(#id9)">
+     </g>
+    </g>
+    <g>
+     <g>
+     </g>
+     <g style="clip-path:url(#id10)">
+     </g>
+    </g>
+    <g>
+     <g>
+     </g>
+     <g style="clip-path:url(#id11)">
+     </g>
+    </g>
+    <g>
+     <g>
+     </g>
+     <g style="clip-path:url(#id12)">
+     </g>
+    </g>
+    <g>
+     <g>
+     </g>
+     <g style="clip-path:url(#id13)">
+     </g>
+    </g>
+    <g>
+     <g>
+     </g>
+     <g style="clip-path:url(#id14)">
+     </g>
+    </g>
+    <g>
+     <g>
+     </g>
+     <g style="clip-path:url(#id15)">
+     </g>
+    </g>
+    <g>
+     <g>
+     </g>
+     <g style="clip-path:url(#id16)">
+     </g>
+    </g>
+    <g>
+     <g>
+     </g>
+     <g style="clip-path:url(#id17)">
+     </g>
+    </g>
+    <g>
+     <g>
+     </g>
+     <g style="clip-path:url(#id18)">
+     </g>
+    </g>
+    <g>
+     <g>
+     </g>
+     <g style="clip-path:url(#id19)">
+     </g>
+    </g>
+    <g>
+     <g>
+     </g>
+     <g style="clip-path:url(#id20)">
+     </g>
+    </g>
+    <g>
+     <g>
+     </g>
+     <g style="clip-path:url(#id21)">
+     </g>
+    </g>
+    <g>
+     <g>
+     </g>
+     <g style="clip-path:url(#id22)">
+     </g>
+    </g>
+    <g>
+     <g>
+     </g>
+     <g style="clip-path:url(#id23)">
+     </g>
+    </g>
+    <g>
+     <g>
+     </g>
+     <g style="clip-path:url(#id24)">
+     </g>
+    </g>
+    <polyline class="fil0 str0" points="19.68,619.19 19.68,618.21 19.68,538.67 19.68,459.13 19.68,379.58 19.68,300.04 19.68,220.5 19.68,219.52 "/>
+    <polyline id="_1" class="fil0 str0" points="94.81,619.19 94.81,618.21 94.81,538.67 94.81,459.13 94.81,379.58 94.81,300.04 94.81,220.5 94.81,219.52 "/>
+    <polyline id="_2" class="fil0 str0" points="169.93,619.19 169.93,618.21 169.93,538.67 169.93,459.13 169.93,379.58 169.93,300.04 169.93,220.5 169.93,219.52 "/>
+    <polyline id="_3" class="fil0 str0" points="245.05,619.19 245.05,618.21 245.05,538.67 245.05,459.13 245.05,379.58 245.05,300.04 245.05,220.5 245.05,219.52 "/>
+    <polyline id="_4" class="fil0 str0" points="320.18,619.19 320.18,618.21 320.18,538.67 320.18,459.13 320.18,379.58 320.18,300.04 320.18,220.5 320.18,219.52 "/>
+    <polyline id="_5" class="fil0 str0" points="395.3,619.19 395.3,618.21 395.3,538.67 395.3,459.13 395.3,379.58 395.3,300.04 395.3,220.5 395.3,219.52 "/>
+    <polyline id="_6" class="fil0 str0" points="18.71,618.21 19.68,618.21 94.81,618.21 169.93,618.21 245.05,618.21 320.18,618.21 395.3,618.21 396.28,618.21 "/>
+    <polyline id="_7" class="fil0 str0" points="18.71,538.67 19.68,538.67 94.81,538.67 169.93,538.67 245.05,538.67 320.18,538.67 395.3,538.67 396.28,538.67 "/>
+    <polyline id="_8" class="fil0 str0" points="18.71,459.13 19.68,459.13 94.81,459.13 169.93,459.13 245.05,459.13 320.18,459.13 395.3,459.13 396.28,459.13 "/>
+    <polyline id="_9" class="fil0 str0" points="18.71,379.58 19.68,379.58 94.81,379.58 169.93,379.58 245.05,379.58 320.18,379.58 395.3,379.58 396.28,379.58 "/>
+    <polyline id="_10" class="fil0 str0" points="18.71,300.04 19.68,300.04 94.81,300.04 169.93,300.04 245.05,300.04 320.18,300.04 395.3,300.04 396.28,300.04 "/>
+    <polyline id="_11" class="fil0 str0" points="18.71,220.5 19.68,220.5 94.81,220.5 169.93,220.5 245.05,220.5 320.18,220.5 395.3,220.5 396.28,220.5 "/>
+   </g>
+  </g>
+  <circle class="fil1 str0" cx="320.18" cy="419.36" r="21.49"/>
+  <circle class="fil1 str0" cx="245.05" cy="419.36" r="21.49"/>
+  <circle class="fil1 str0" cx="169.93" cy="419.36" r="21.49"/>
+  <g transform="matrix(1.00001 0 0 1 -1966.72 581.216)">
+   <text x="2041.57" y="-375.48"  class="fil2 fnt0">X</text>
+  </g>
+  <g transform="matrix(1.00001 0 0 1 -2041.84 581.216)">
+   <text x="2041.57" y="-375.48"  class="fil2 fnt0">X</text>
+  </g>
+  <text x="145.89" y="114.25"  class="fil2 fnt1">D</text>
+ </g>
+ <g id="Layer_x0020_2">
+  <metadata id="CorelCorpID_1Corel-Layer"/>
+  <g transform="matrix(1.00001 0 0 1 -1666.22 581.216)">
+   <text x="2041.57" y="-375.48"  class="fil2 fnt2">X</text>
+  </g>
+  <text x="411.7" y="483.03"  class="fil2 fnt3">7</text>
+ </g>
+</svg>

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>867-5309 Jenny 20250302</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: monospace;
+      display: flex;
+      flex-direction: row;
+      height: 100vh;
+    }
+    .chart {
+      flex: 2;
+      padding: 1em;
+      overflow-y: auto;
+    }
+    .chords {
+      flex: 1;
+      padding: 1em;
+      border-left: 1px solid #ccc;
+      overflow-y: auto;
+      text-align: center;
+    }
+    @media (orientation: portrait) {
+      body {
+        flex-direction: column;
+      }
+      .chords {
+        border-left: none;
+        border-top: 1px solid #ccc;
+      }
+    }
+    .chord-block {
+      margin-bottom: 2em;
+    }
+    .chord-block img {
+      width: 80%;
+      max-width: 120px;
+      display: block;
+      margin: 0.5em auto;
+    }
+  </style>
+</head>
+<body>
+<!-- chart: F#m D A B C#m -->
+<div class="chart">
+<pre>
+867-5309 Jenny
+Words and music by Alex Call and Jim Keller © 1981
+
+[Intro:]
+F#m(SS) D(SS) A(SS) B(SS) | F#m(SS) D(SS) A(SS) B(SS)
+                                                  Hey! (2nd Beat)
+F#m D A B | F#m D A B
+
+F#m       D      A         B       F#m  D  A  B
+   Jenny, Jenny, who can I turn to?  
+F#m            D         A          B    F#m  D  A  B
+   You give me something I can hold on to.  
+F#m           D         A        B         F#m  D  A  B
+   I know you think I'm like the others be-fore  
+F#m             D        A      B      F#m  D  A  B
+   Who saw your name and number on the wall.
+
+E         D        A
+ Jenny, I got your number;
+E          A        D
+ I need to make you mine.
+E             D           A
+ Jenny, don't change your number,
+
+F#m          D          A       B   
+   Eight six seven five three O nine.
+F#m          D          A       B
+   Eight six seven five three O nine.
+F#m          D          A       B   
+   Eight six seven five three O nine.
+F#m          D          A       B 
+   Eight six seven five three O nine.
+
+F#m       D      A               B     F#m  D  A  B
+   Jenny, Jenny, you're the girl for me.  
+F#m          D               A          B    F#m  D  A  B
+   You don't know me but you make me so happy.  
+F#m           D           A          B       F#m  D  A  B
+   I tried to call you be-fore but I lost my nerve.     (I)
+        F#m       D       A     B         F#m  D  A  B
+I tried my i-magi-nation,   but I was dis-turbed.  
+
+E         D        A
+ Jenny, I got your number;
+E          A        D
+ I need to make you mine.
+E             D           A
+ Jenny, don't change your number,
+
+F#m          D          A       B   
+   Eight six seven five three O nine.
+F#m          D          A       B
+   Eight six seven five three O nine.
+F#m          D          A       B   
+   Eight six seven five three O nine.
+F#m          D          A       B      (C#m)
+   Eight six seven five three O nine.
+
+
+C#m          E
+   I got it,   I got it.
+F#m           A              B
+   I got your number off the wall.
+C#m          E
+   I got it,   I got it.
+F#m                       A         B
+   For a good time, for a good time call.
+
+F#m(SS) D(SS) A(SS) B(SS) | F#m(SS) D(SS) A(SS) B(SS)
+                                                  Hey! (2nd Beat)
+F#m D A B | F#m D A B | (E)
+
+E             D           A
+ Jenny, don't change your number,
+E          A        D
+ I need to make you mine.
+E         D           A
+ Jenny, I called your number,
+
+F#m          D          A       B   
+   Eight six seven five three O nine.
+F#m          D          A       B
+   Eight six seven five three O nine.
+F#m          D          A       B   
+   Eight six seven five three O nine.
+F#m          D          A       B
+   Eight six seven five three O nine.
+
+F#m       D      A         B       
+   Jenny, Jenny, who can I turn to?  
+F#m          D          A       B   
+   Eight six seven five three O nine.
+        F#m        D          A      B          (F#m)
+For the price of a dime I can always turn to you(Eight…)
+
+F#m          D          A       B   
+   Eight six seven five three O nine.
+F#m          D          A       B
+   Eight six seven five three O nine.
+F#m          D          A       B   
+   Eight six seven five three O nine.
+F#m          D          A       B
+   Eight six seven five three O nine.
+F#m          D          A       B(SS)
+   Eight six seven five three O nine.
+</pre>
+</div>
+<div class="chords" id="chord-diagrams"></div>
+<script>
+  const svgDir = 'svg_chords';
+  const chartLine = document.body.innerHTML.match(/<!-- chart: (.+?) -->/);
+  if (chartLine) {
+    const chords = [...new Set(chartLine[1].trim().split(/\s+/))];
+    const container = document.getElementById('chord-diagrams');
+    chords.forEach(chord => {
+      const safeName = chord
+        .replace(/#/g, 'sharp')
+        .replace(/\//g, '_');
+
+      const block = document.createElement('div');
+      block.className = 'chord-block';
+      block.innerHTML = `<strong>${chord}</strong>
+        <img src="${svgDir}/${safeName}_1.svg" alt="${chord} shape 1">
+        <img src="${svgDir}/${safeName}_2.svg" alt="${chord} shape 2">`;
+      container.appendChild(block);
+    });
+  }
+</script>
+</body>
+</html>

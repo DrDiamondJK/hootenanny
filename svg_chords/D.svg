@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Creator: CorelDRAW Standard 2024 -->
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="21.068mm" height="28.4553mm" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+viewBox="0 0 243.78 329.26"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ xmlns:xodm="http://www.corel.com/coreldraw/odm/2003">
+ <defs>
+  <font id="FontID1" horiz-adv-x="685" font-variant="normal" style="fill-rule:nonzero" font-weight="700">
+	<font-face 
+		font-family="Swis721 BT">
+		<font-face-src>
+			<font-face-name name="Swis721 BT Bold"/>
+		</font-face-src>
+	</font-face>
+   <missing-glyph><path d="M0 0z"/></missing-glyph>
+   <glyph unicode="D" horiz-adv-x="726" d="M219.002 129.993l118.654 0c68.6698,0 118.513,18.0001 149.174,54.0004 30.827,36.0003 46.1578,94.3472 46.1578,175.017 0,80.4809 -14.3151,139.489 -42.9925,177.332 -28.6538,37.8192 -73.3234,56.6461 -134.34,56.6461l-136.655 0 0 -462.996zm-144.993 -129.993l0 718.99 281.648 0c110.505,0 192.852,-29.8349 247.018,-89.3157 54.1658,-59.5044 81.3313,-149.836 81.3313,-270.853 0,-65.8115 -10.0158,-123.662 -30.0002,-173.812 -20.008,-50.1736 -49.1815,-90.5204 -87.166,-121.017 -28.6774,-22.8191 -61.3469,-39.1657 -97.8433,-49.1579 -36.331,-9.82685 -87.4968,-14.8348 -153.332,-14.8348l-241.655 0z"/>
+  </font>
+  <font id="FontID0" horiz-adv-x="637" font-variant="normal" style="fill-rule:nonzero" font-style="normal" font-weight="400">
+	<font-face 
+		font-family="Swis721 BT">
+		<font-face-src>
+			<font-face-name name="Swis721 BT Roman"/>
+		</font-face-src>
+	</font-face>
+   <missing-glyph><path d="M0 0z"/></missing-glyph>
+   <glyph unicode="x" horiz-adv-x="478" d="M0 0l182.339 269 -173.35 253.998 103.023 0 128.488 -188.01 125.993 188.01 101.52 0 -175.845 -253.006 186.819 -269.992 -105.83 0 -137.165 202.161 -132.827 -202.161 -103.165 0z"/>
+  </font>
+  <style type="text/css">
+   <![CDATA[
+    @font-face { font-family:"Swis721 BT";font-variant:normal;font-weight:bold;src:url("#FontID1") format(svg)}
+    @font-face { font-family:"Swis721 BT";font-variant:normal;font-style:normal;font-weight:normal;src:url("#FontID0") format(svg)}
+    .str0 {stroke:black;stroke-width:2.04;stroke-miterlimit:2.61313}
+    .fil1 {fill:none}
+    .fil2 {fill:black}
+    .fil0 {fill:black}
+    .fil3 {fill:white}
+    .fnt0 {font-weight:normal;font-size:40.8px;font-family:'Swis721 BT'}
+    .fnt1 {font-weight:bold;font-size:48.98px;font-family:'Swis721 BT'}
+   ]]>
+  </style>
+      <clipPath id="id0">
+       <path d="M10.79 97.16l42.43 0 0 57.51 -42.43 0 0 -57.51z"/>
+      </clipPath>
+      <clipPath id="id1">
+       <path d="M53.22 97.16l42.43 0 0 57.51 -42.43 0 0 -57.51z"/>
+      </clipPath>
+      <clipPath id="id2">
+       <path d="M95.64 97.16l42.43 0 0 57.51 -42.43 0 0 -57.51z"/>
+      </clipPath>
+      <clipPath id="id3">
+       <path d="M138.07 97.16l42.43 0 0 57.51 -42.43 0 0 -57.51z"/>
+      </clipPath>
+      <clipPath id="id4">
+       <path d="M180.5 97.16l42.43 0 0 57.51 -42.43 0 0 -57.51z"/>
+      </clipPath>
+      <clipPath id="id5">
+       <path d="M10.79 154.67l42.43 0 0 57.52 -42.43 0 0 -57.52z"/>
+      </clipPath>
+      <clipPath id="id6">
+       <path d="M53.22 154.67l42.43 0 0 57.52 -42.43 0 0 -57.52z"/>
+      </clipPath>
+      <clipPath id="id7">
+       <path d="M95.64 154.67l42.43 0 0 57.52 -42.43 0 0 -57.52z"/>
+      </clipPath>
+      <clipPath id="id8">
+       <path d="M138.07 154.67l42.43 0 0 57.52 -42.43 0 0 -57.52z"/>
+      </clipPath>
+      <clipPath id="id9">
+       <path d="M180.5 154.67l42.43 0 0 57.52 -42.43 0 0 -57.52z"/>
+      </clipPath>
+      <clipPath id="id10">
+       <path d="M10.79 212.19l42.43 0 0 57.51 -42.43 0 0 -57.51z"/>
+      </clipPath>
+      <clipPath id="id11">
+       <path d="M53.22 212.19l42.43 0 0 57.51 -42.43 0 0 -57.51z"/>
+      </clipPath>
+      <clipPath id="id12">
+       <path d="M95.64 212.19l42.43 0 0 57.51 -42.43 0 0 -57.51z"/>
+      </clipPath>
+      <clipPath id="id13">
+       <path d="M138.07 212.19l42.43 0 0 57.51 -42.43 0 0 -57.51z"/>
+      </clipPath>
+      <clipPath id="id14">
+       <path d="M180.5 212.19l42.43 0 0 57.51 -42.43 0 0 -57.51z"/>
+      </clipPath>
+      <clipPath id="id15">
+       <path d="M10.79 269.7l42.43 0 0 57.52 -42.43 0 0 -57.52z"/>
+      </clipPath>
+      <clipPath id="id16">
+       <path d="M53.22 269.7l42.43 0 0 57.52 -42.43 0 0 -57.52z"/>
+      </clipPath>
+      <clipPath id="id17">
+       <path d="M95.64 269.7l42.43 0 0 57.52 -42.43 0 0 -57.52z"/>
+      </clipPath>
+      <clipPath id="id18">
+       <path d="M138.07 269.7l42.43 0 0 57.52 -42.43 0 0 -57.52z"/>
+      </clipPath>
+      <clipPath id="id19">
+       <path d="M180.5 269.7l42.43 0 0 57.52 -42.43 0 0 -57.52z"/>
+      </clipPath>
+ </defs>
+ <g id="Layer_x0020_2">
+  <metadata id="CorelCorpID_0Corel-Layer"/>
+  <rect class="fil0 str0" x="10.79" y="85.66" width="210.7" height="10.51"/>
+  <g id="_1650109259136">
+   <g>
+    <g>
+    </g>
+    <g>
+     <g>
+     </g>
+     <g style="clip-path:url(#id0)">
+     </g>
+    </g>
+    <g>
+     <g>
+     </g>
+     <g style="clip-path:url(#id1)">
+     </g>
+    </g>
+    <g>
+     <g>
+     </g>
+     <g style="clip-path:url(#id2)">
+     </g>
+    </g>
+    <g>
+     <g>
+     </g>
+     <g style="clip-path:url(#id3)">
+     </g>
+    </g>
+    <g>
+     <g>
+     </g>
+     <g style="clip-path:url(#id4)">
+     </g>
+    </g>
+    <g>
+     <g>
+     </g>
+     <g style="clip-path:url(#id5)">
+     </g>
+    </g>
+    <g>
+     <g>
+     </g>
+     <g style="clip-path:url(#id6)">
+     </g>
+    </g>
+    <g>
+     <g>
+     </g>
+     <g style="clip-path:url(#id7)">
+     </g>
+    </g>
+    <g>
+     <g>
+     </g>
+     <g style="clip-path:url(#id8)">
+     </g>
+    </g>
+    <g>
+     <g>
+     </g>
+     <g style="clip-path:url(#id9)">
+     </g>
+    </g>
+    <g>
+     <g>
+     </g>
+     <g style="clip-path:url(#id10)">
+     </g>
+    </g>
+    <g>
+     <g>
+     </g>
+     <g style="clip-path:url(#id11)">
+     </g>
+    </g>
+    <g>
+     <g>
+     </g>
+     <g style="clip-path:url(#id12)">
+     </g>
+    </g>
+    <g>
+     <g>
+     </g>
+     <g style="clip-path:url(#id13)">
+     </g>
+    </g>
+    <g>
+     <g>
+     </g>
+     <g style="clip-path:url(#id14)">
+     </g>
+    </g>
+    <g>
+     <g>
+     </g>
+     <g style="clip-path:url(#id15)">
+     </g>
+    </g>
+    <g>
+     <g>
+     </g>
+     <g style="clip-path:url(#id16)">
+     </g>
+    </g>
+    <g>
+     <g>
+     </g>
+     <g style="clip-path:url(#id17)">
+     </g>
+    </g>
+    <g>
+     <g>
+     </g>
+     <g style="clip-path:url(#id18)">
+     </g>
+    </g>
+    <g>
+     <g>
+     </g>
+     <g style="clip-path:url(#id19)">
+     </g>
+    </g>
+    <polyline class="fil1 str0" points="10.79,328.24 10.79,327.22 10.79,269.7 10.79,212.19 10.79,154.67 10.79,97.16 10.79,96.14 "/>
+    <polyline id="_1" class="fil1 str0" points="53.22,328.24 53.22,327.22 53.22,269.7 53.22,212.19 53.22,154.67 53.22,97.16 53.22,96.14 "/>
+    <polyline id="_2" class="fil1 str0" points="95.64,328.24 95.64,327.22 95.64,269.7 95.64,212.19 95.64,154.67 95.64,97.16 95.64,96.14 "/>
+    <polyline id="_3" class="fil1 str0" points="138.07,328.24 138.07,327.22 138.07,269.7 138.07,212.19 138.07,154.67 138.07,97.16 138.07,96.14 "/>
+    <polyline id="_4" class="fil1 str0" points="180.5,328.24 180.5,327.22 180.5,269.7 180.5,212.19 180.5,154.67 180.5,97.16 180.5,96.14 "/>
+    <polyline id="_5" class="fil1 str0" points="222.92,328.24 222.92,327.22 222.92,269.7 222.92,212.19 222.92,154.67 222.92,97.16 222.92,96.14 "/>
+    <polyline id="_6" class="fil1 str0" points="9.77,327.22 10.79,327.22 53.22,327.22 95.64,327.22 138.07,327.22 180.5,327.22 222.92,327.22 223.94,327.22 "/>
+    <polyline id="_7" class="fil1 str0" points="9.77,269.7 10.79,269.7 53.22,269.7 95.64,269.7 138.07,269.7 180.5,269.7 222.92,269.7 223.94,269.7 "/>
+    <polyline id="_8" class="fil1 str0" points="9.77,212.19 10.79,212.19 53.22,212.19 95.64,212.19 138.07,212.19 180.5,212.19 222.92,212.19 223.94,212.19 "/>
+    <polyline id="_9" class="fil1 str0" points="9.77,154.67 10.79,154.67 53.22,154.67 95.64,154.67 138.07,154.67 180.5,154.67 222.92,154.67 223.94,154.67 "/>
+    <polyline id="_10" class="fil1 str0" points="9.77,97.16 10.79,97.16 53.22,97.16 95.64,97.16 138.07,97.16 180.5,97.16 222.92,97.16 223.94,97.16 "/>
+   </g>
+  </g>
+  <circle class="fil0 str0" cx="138.07" cy="183.43" r="19.84"/>
+  <circle class="fil0 str0" cx="222.92" cy="183.43" r="19.84"/>
+  <circle class="fil0 str0" cx="180.5" cy="240.95" r="19.84"/>
+  <text x="" y="77.7"  class="fil2 fnt0">x</text>
+  <text x="43.45" y="77.7"  class="fil2 fnt0">x</text>
+  <circle class="fil3 str0" cx="95.64" cy="67.03" r="10.73"/>
+  <text x="97.58" y="35.22"  class="fil2 fnt1">D</text>
+ </g>
+</svg>
