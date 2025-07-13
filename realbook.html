@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real Book - Song Index</title>
+    <style>
+        body { 
+            font-family: 'Georgia', serif; 
+            padding: 2em; 
+            background: #f8f8f8;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        h1 { 
+            text-align: center; 
+            color: #2c3e50; 
+            border-bottom: 3px solid #3498db; 
+            padding-bottom: 0.5em;
+        }
+        .stats {
+            text-align: center;
+            margin: 1em 0;
+            color: #7f8c8d;
+            font-style: italic;
+        }
+        .song-list { 
+            list-style: none; 
+            padding: 0; 
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1em;
+        }
+        .song-item { 
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 1em;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            transition: transform 0.2s;
+        }
+        .song-item:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+        }
+        .song-title { 
+            font-size: 1.1em;
+            font-weight: bold;
+            margin-bottom: 0.5em;
+        }
+        .song-title a { 
+            text-decoration: none; 
+            color: #2c3e50; 
+        }
+        .song-title a:hover { 
+            color: #3498db; 
+        }
+        .song-info {
+            font-size: 0.9em;
+            color: #7f8c8d;
+        }
+        .chord-preview {
+            margin-top: 0.5em;
+            font-family: monospace;
+            background: #ecf0f1;
+            padding: 0.3em;
+            border-radius: 4px;
+            font-size: 0.8em;
+        }
+        .last-updated {
+            text-align: center;
+            margin-top: 2em;
+            font-size: 0.8em;
+            color: #95a5a6;
+        }
+    </style>
+</head>
+<body>
+    <h1>🎵 Real Book</h1>
+    <div class="stats">
+        {song_count} songs • {chord_count} unique chords
+    </div>
+    
+    <ul class="song-list">
+        <li class="song-item">
+            <div class="song-title">
+                <a href="867-5309 Jenny 20250302.html">867-5309 Jenny 20250302</a>
+            </div>
+            <div class="song-info">
+                Added: 2025-07-13
+            </div>
+            <div class="chord-preview">
+                A B D E F#m
+            </div>
+        </li>
+    </ul>
+    
+    <div class="last-updated">
+        Last updated: 2025-07-13 16:57
+    </div>
+</body>
+</html>
