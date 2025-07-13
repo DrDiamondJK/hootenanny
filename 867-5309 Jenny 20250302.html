@@ -351,11 +351,34 @@ F#m          D          A       B(SS)
   }
 
   document.addEventListener('keydown', (e) => {
-    if (e.key === 'PageDown' || e.key === 'ArrowDown' || e.key === 'ArrowRight') {
+    console.log('Key pressed:', e.key, 'Code:', e.code); // Debug logging
+    
+    // Prevent default browser behavior for navigation keys
+    if (['ArrowLeft', 'ArrowRight', 'ArrowUp', 'ArrowDown', 'PageUp', 'PageDown', 'Space'].includes(e.key)) {
+      e.preventDefault();
+    }
+    
+    // Navigation logic
+    if (e.key === 'PageDown' || e.key === 'ArrowDown' || e.key === 'ArrowRight' || e.key === ' ') {
       nextPage();
     } else if (e.key === 'PageUp' || e.key === 'ArrowUp' || e.key === 'ArrowLeft') {
       previousPage();
     }
+  });
+
+  // Also listen for keyup events (some page turners work better with keyup)
+  document.addEventListener('keyup', (e) => {
+    console.log('Key released:', e.key, 'Code:', e.code); // Debug logging
+    
+    if (['ArrowLeft', 'ArrowRight', 'ArrowUp', 'ArrowDown', 'PageUp', 'PageDown', 'Space'].includes(e.key)) {
+      e.preventDefault();
+    }
+  });
+
+  // Additional event listeners for page turner compatibility
+  document.addEventListener('keypress', (e) => {
+    console.log('Key press:', e.key, 'Code:', e.code); // Debug logging
+    e.preventDefault();
   });
 
   // Recalculate pages on window resize
