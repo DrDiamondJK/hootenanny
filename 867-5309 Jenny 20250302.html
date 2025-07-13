@@ -38,7 +38,7 @@
     }
     .chord-block {
       text-align: center;
-      padding: 0.5em;
+      padding: 0.3em;
       border: 1px solid #ddd;
       border-radius: 6px;
       background: #fafafa;
@@ -48,7 +48,7 @@
       width: auto;
       max-width: 100%;
       display: block;
-      margin: 0.5em auto;
+      margin: 0.3em auto;
       border: 1px solid #eee;
       border-radius: 4px;
     }
@@ -73,11 +73,37 @@
       bottom: 20px;
       left: 50%;
       transform: translateX(-50%);
-      background: rgba(0,0,0,0.7);
+      background: rgba(0,0,0,0.8);
       color: white;
-      padding: 0.5em 1em;
-      border-radius: 20px;
-      font-size: 0.8em;
+      padding: 1em 1.5em;
+      border-radius: 25px;
+      font-size: 0.9em;
+      display: flex;
+      align-items: center;
+      gap: 1em;
+      z-index: 1000;
+    }
+    .nav-button {
+      background: rgba(255,255,255,0.2);
+      border: none;
+      color: white;
+      padding: 0.5em 0.8em;
+      border-radius: 15px;
+      cursor: pointer;
+      font-size: 0.9em;
+      transition: background 0.2s;
+    }
+    .nav-button:hover {
+      background: rgba(255,255,255,0.3);
+    }
+    .nav-button:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+    .page-info {
+      font-weight: bold;
+      min-width: 80px;
+      text-align: center;
     }
     .return-button {
       display: inline-block;
@@ -103,13 +129,13 @@
 <body>
 <!-- chart: A B D E F#m -->
 <div class="chart" id="song-content">
-<div class="song-block intro"><pre>[Intro:]
+<div class="song-block Intro"><pre>[Intro:]
 F#m(SS) D(SS) A(SS) B(SS) | F#m(SS) D(SS) A(SS) B(SS)
                                                   Hey! (2nd Beat)
 F#m D A B | F#m D A B
 </pre></div>
 
-<div class="song-block verse"><pre>F#m       D      A         B       F#m  D  A  B
+<div class="song-block Verse"><pre>F#m       D      A         B       F#m  D  A  B
    Jenny, Jenny, who can I turn to?  
 F#m            D         A          B    F#m  D  A  B
    You give me something I can hold on to.  
@@ -213,14 +239,18 @@ F#m          D          A       B
 F#m          D          A       B(SS)
    Eight six seven five three O nine.</pre></div>
 <div style="text-align: center; margin: 2em 0;">
-  <a href="realbook.html" class="return-button">
+  <a href="index.html" class="return-button">
     ← Return to Real Book
   </a>
 </div>
 </div>
 <div class="chords" id="chord-diagrams"></div>
 <div class="navigation">
-  Use PageUp/PageDown to navigate • Page <span id="current-page">1</span> of <span id="total-pages">1</span>
+  <button class="nav-button" id="prev-btn" onclick="previousPage()">← Prev</button>
+  <div class="page-info">
+    Page <span id="current-page">1</span> of <span id="total-pages">1</span>
+  </div>
+  <button class="nav-button" id="next-btn" onclick="nextPage()">Next →</button>
 </div>
 <script>
   const svgDir = 'svg_chords';
@@ -232,42 +262,113 @@ F#m          D          A       B(SS)
       const safeName = chord.replace(/#/g, 'sharp').replace(/\//g, '_');
       const block = document.createElement('div');
       block.className = 'chord-block';
-      block.innerHTML = `<strong>${chord}</strong>
-        <img src="${svgDir}/${safeName}_1.svg" alt="${chord} shape 1" onerror="this.style.display='none'">
+      block.innerHTML = `<img src="${svgDir}/${safeName}_1.svg" alt="${chord} shape 1" onerror="this.style.display='none'">
         <img src="${svgDir}/${safeName}_2.svg" alt="${chord} shape 2" onerror="this.style.display='none'">`;
       container.appendChild(block);
     });
   }
 
-  // Improved paging system
+  // Improved paging system - multiple blocks per page
   const blocks = Array.from(document.querySelectorAll('.song-block'));
-  let currentIndex = 0;
+  let currentPageIndex = 0;
+  let pages = [];
+  
+  function calculatePages() {
+    pages = [];
+    const containerHeight = window.innerHeight * 0.75; // Leave room for navigation
+    let currentPage = [];
+    let currentHeight = 0;
+    
+    blocks.forEach((block, index) => {
+      // Show block temporarily to measure it
+      block.style.display = 'block';
+      block.style.visibility = 'hidden';
+      
+      const blockHeight = block.offsetHeight + 32; // Add margin
+      
+      // If this block would overflow the page, start a new page
+      if (currentHeight + blockHeight > containerHeight && currentPage.length > 0) {
+        pages.push([...currentPage]);
+        currentPage = [index];
+        currentHeight = blockHeight;
+      } else {
+        currentPage.push(index);
+        currentHeight += blockHeight;
+      }
+      
+      // Hide block again
+      block.style.display = 'none';
+      block.style.visibility = 'visible';
+    });
+    
+    // Add the last page if it has content
+    if (currentPage.length > 0) {
+      pages.push(currentPage);
+    }
+  }
   
   function updateNavigation() {
-    document.getElementById('current-page').textContent = currentIndex + 1;
-    document.getElementById('total-pages').textContent = blocks.length;
+    const currentPageSpan = document.getElementById('current-page');
+    const totalPagesSpan = document.getElementById('total-pages');
+    const prevBtn = document.getElementById('prev-btn');
+    const nextBtn = document.getElementById('next-btn');
+    
+    if (currentPageSpan) currentPageSpan.textContent = currentPageIndex + 1;
+    if (totalPagesSpan) totalPagesSpan.textContent = pages.length;
+    
+    if (prevBtn) prevBtn.disabled = currentPageIndex === 0;
+    if (nextBtn) nextBtn.disabled = currentPageIndex === pages.length - 1;
   }
 
-  function showBlocks(startIndex) {
-    blocks.forEach((b, i) => {
-      b.classList.toggle('hidden', i !== startIndex);
+  function showPage(pageIndex) {
+    // Hide all blocks
+    blocks.forEach(block => {
+      block.style.display = 'none';
     });
+    
+    // Show blocks for current page
+    if (pages[pageIndex]) {
+      pages[pageIndex].forEach(blockIndex => {
+        blocks[blockIndex].style.display = 'block';
+      });
+    }
+    
     updateNavigation();
+  }
+  
+  function nextPage() {
+    if (currentPageIndex < pages.length - 1) {
+      currentPageIndex++;
+      showPage(currentPageIndex);
+    }
+  }
+  
+  function previousPage() {
+    if (currentPageIndex > 0) {
+      currentPageIndex--;
+      showPage(currentPageIndex);
+    }
   }
 
   document.addEventListener('keydown', (e) => {
-    if (e.key === 'PageDown' || e.key === 'ArrowDown') {
-      currentIndex = Math.min(blocks.length - 1, currentIndex + 1);
-      showBlocks(currentIndex);
-    } else if (e.key === 'PageUp' || e.key === 'ArrowUp') {
-      currentIndex = Math.max(0, currentIndex - 1);
-      showBlocks(currentIndex);
+    if (e.key === 'PageDown' || e.key === 'ArrowDown' || e.key === 'ArrowRight') {
+      nextPage();
+    } else if (e.key === 'PageUp' || e.key === 'ArrowUp' || e.key === 'ArrowLeft') {
+      previousPage();
     }
+  });
+
+  // Recalculate pages on window resize
+  window.addEventListener('resize', () => {
+    calculatePages();
+    currentPageIndex = Math.min(currentPageIndex, pages.length - 1);
+    showPage(currentPageIndex);
   });
 
   window.addEventListener('load', () => {
     if (blocks.length > 0) {
-      showBlocks(currentIndex);
+      calculatePages();
+      showPage(currentPageIndex);
     }
   });
 </script>
