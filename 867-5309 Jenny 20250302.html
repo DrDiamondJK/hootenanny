@@ -54,20 +54,35 @@
     }
     .song-block {
       margin-bottom: 2em;
-      padding: 1.5em;
+      padding: 2em;
       border: 1px solid #ddd;
       border-radius: 8px;
       background: #fafafa;
-      max-height: 85vh;
-      overflow: auto;
-      line-height: 1.6;
+      line-height: 1.8;
+      font-size: 1.1em;
+      min-height: 70vh;
+      display: none;
+    }
+    .song-block.active {
+      display: block;
+    }
+    .block-label {
+      font-size: 1.3em;
+      font-weight: bold;
+      color: #2c3e50;
+      margin-bottom: 1em;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      border-bottom: 2px solid #3498db;
+      padding-bottom: 0.5em;
     }
     .song-block pre {
       margin: 0;
       white-space: pre-wrap;
       font-family: inherit;
+      font-size: 1.2em;
+      line-height: 1.6;
     }
-    .song-block.hidden { display: none; }
     .navigation {
       position: fixed;
       bottom: 20px;
@@ -102,8 +117,13 @@
     }
     .page-info {
       font-weight: bold;
-      min-width: 80px;
+      min-width: 120px;
       text-align: center;
+      font-size: 0.9em;
+    }
+    .section-name {
+      color: #3498db;
+      font-weight: bold;
     }
     .return-button {
       display: inline-block;
@@ -119,6 +139,16 @@
     .return-button:hover {
       background-color: #2980b9;
     }
+    .end-message {
+      display: none;
+      text-align: center;
+      padding: 3em 2em;
+      color: #7f8c8d;
+      font-size: 1.1em;
+    }
+    .end-message.active {
+      display: block;
+    }
     @media (orientation: portrait) {
       body { flex-direction: column; }
       .chart { flex: 3; }
@@ -129,13 +159,13 @@
 <body>
 <!-- chart: A B D E F#m -->
 <div class="chart" id="song-content">
-<div class="song-block Intro"><div class="block-label">Intro</div><pre>[Intro:]
+<div class="song-block"><div class="block-label">Intro</div><pre>[Intro:]
 F#m(SS) D(SS) A(SS) B(SS) | F#m(SS) D(SS) A(SS) B(SS)
                                                   Hey! (2nd Beat)
 F#m D A B | F#m D A B
 </pre></div>
 
-<div class="song-block Verse"><div class="block-label">Verse</div><pre>F#m       D      A         B       F#m  D  A  B
+<div class="song-block"><div class="block-label">Verse</div><pre>F#m       D      A         B       F#m  D  A  B
    Jenny, Jenny, who can I turn to?  
 F#m            D         A          B    F#m  D  A  B
    You give me something I can hold on to.  
@@ -145,7 +175,7 @@ F#m             D        A      B      F#m  D  A  B
    Who saw your name and number on the wall.
 </pre></div>
 
-<div class="song-block Chorus"><div class="block-label">Chorus</div><pre>E         D        A
+<div class="song-block"><div class="block-label">Chorus</div><pre>E         D        A
  Jenny, I got your number;
 E          A        D
  I need to make you mine.
@@ -160,11 +190,9 @@ F#m          D          A       B
    Eight six seven five three O nine.
 F#m          D          A       B 
    Eight six seven five three O nine.
+</pre></div>
 
-F#m       D      A               B     F#m  D  A  B
-   Jenny, Jenny, you're the girl for me.  </pre></div>
-
-<div class="song-block Verse"><div class="block-label">Verse</div><pre>F#m       D      A               B     F#m  D  A  B
+<div class="song-block"><div class="block-label">Verse</div><pre>F#m       D      A               B     F#m  D  A  B
    Jenny, Jenny, you're the girl for me.  
 F#m          D               A          B    F#m  D  A  B
    You don't know me but you make me so happy.  
@@ -174,7 +202,7 @@ F#m           D           A          B       F#m  D  A  B
 I tried my i-magi-nation,   but I was dis-turbed.  
 </pre></div>
 
-<div class="song-block Chorus"><div class="block-label">Chorus</div><pre>E         D        A
+<div class="song-block"><div class="block-label">Chorus</div><pre>E         D        A
  Jenny, I got your number;
 E          A        D
  I need to make you mine.
@@ -192,7 +220,7 @@ F#m          D          A       B      (C#m)
 
 </pre></div>
 
-<div class="song-block Bridge"><div class="block-label">Bridge</div><pre>C#m          E
+<div class="song-block"><div class="block-label">Bridge</div><pre>C#m          E
    I got it,   I got it.
 F#m           A              B
    I got your number off the wall.
@@ -206,7 +234,7 @@ F#m(SS) D(SS) A(SS) B(SS) | F#m(SS) D(SS) A(SS) B(SS)
 F#m D A B | F#m D A B | (E)
 </pre></div>
 
-<div class="song-block Chorus"><div class="block-label">Chorus</div><pre>E             D           A
+<div class="song-block"><div class="block-label">Chorus</div><pre>E             D           A
  Jenny, don't change your number,
 E          A        D
  I need to make you mine.
@@ -223,7 +251,7 @@ F#m          D          A       B
    Eight six seven five three O nine.
 </pre></div>
 
-<div class="song-block Chrous"><div class="block-label">Chrous</div><pre>F#m       D      A         B       
+<div class="song-block"><div class="block-label">Chorus</div><pre>F#m       D      A         B       
    Jenny, Jenny, who can I turn to?  
 F#m          D          A       B   
    Eight six seven five three O nine.
@@ -240,19 +268,24 @@ F#m          D          A       B
    Eight six seven five three O nine.
 F#m          D          A       B(SS)
    Eight six seven five three O nine.</pre></div>
-<div style="text-align: center; margin: 2em 0;">
-  <a href="index.html" class="return-button">
-    ← Return to Real Book
-  </a>
+<div class="end-message" id="end-message">
+  <h2>🎵 Song Complete</h2>
+  <p>You've reached the end of this song.</p>
+  <div style="text-align: center; margin: 2em 0;">
+    <a href="index.html" class="return-button">
+      ← Return to Real Book
+    </a>
+  </div>
 </div>
 </div>
 <div class="chords" id="chord-diagrams"></div>
 <div class="navigation">
-  <button class="nav-button" id="prev-btn" onclick="previousPage()">← Prev</button>
+  <button class="nav-button" id="prev-btn" onclick="previousBlock()">← Prev</button>
   <div class="page-info">
-    Page <span id="current-page">1</span> of <span id="total-pages">1</span>
+    <span class="section-name" id="current-section">-</span><br>
+    <span id="current-page">1</span> of <span id="total-pages">1</span>
   </div>
-  <button class="nav-button" id="next-btn" onclick="nextPage()">Next →</button>
+  <button class="nav-button" id="next-btn" onclick="nextBlock()">Next →</button>
 </div>
 <script>
   const svgDir = 'svg_chords';
@@ -264,136 +297,124 @@ F#m          D          A       B(SS)
       const safeName = chord.replace(/#/g, 'sharp').replace(/\//g, '_');
       const block = document.createElement('div');
       block.className = 'chord-block';
-      block.innerHTML = `<img src="${svgDir}/${safeName}_1.svg" alt="${chord} shape 1" onerror="this.style.display='none'">
+      block.innerHTML = `<div style="font-weight: bold; margin-bottom: 0.3em;">${chord}</div>
+        <img src="${svgDir}/${safeName}_1.svg" alt="${chord} shape 1" onerror="this.style.display='none'">
         <img src="${svgDir}/${safeName}_2.svg" alt="${chord} shape 2" onerror="this.style.display='none'">`;
       container.appendChild(block);
     });
   }
 
-  // Improved paging system - multiple blocks per page
+  // Simple block-based paging - one song block per page
   const blocks = Array.from(document.querySelectorAll('.song-block'));
-  let currentPageIndex = 0;
-  let pages = [];
+  const endMessage = document.getElementById('end-message');
+  let currentBlockIndex = 0;
   
-  function calculatePages() {
-    pages = [];
-    const containerHeight = window.innerHeight * 0.75; // Leave room for navigation
-    let currentPage = [];
-    let currentHeight = 0;
-    
-    blocks.forEach((block, index) => {
-      // Show block temporarily to measure it
-      block.style.display = 'block';
-      block.style.visibility = 'hidden';
-      
-      const blockHeight = block.offsetHeight + 32; // Add margin
-      
-      // If this block would overflow the page, start a new page
-      if (currentHeight + blockHeight > containerHeight && currentPage.length > 0) {
-        pages.push([...currentPage]);
-        currentPage = [index];
-        currentHeight = blockHeight;
-      } else {
-        currentPage.push(index);
-        currentHeight += blockHeight;
-      }
-      
-      // Hide block again
-      block.style.display = 'none';
-      block.style.visibility = 'visible';
-    });
-    
-    // Add the last page if it has content
-    if (currentPage.length > 0) {
-      pages.push(currentPage);
-    }
-  }
+  // Extract section names from block labels
+  const sectionNames = blocks.map(block => {
+    const label = block.querySelector('.block-label');
+    return label ? label.textContent.trim() : 'Section';
+  });
   
   function updateNavigation() {
     const currentPageSpan = document.getElementById('current-page');
     const totalPagesSpan = document.getElementById('total-pages');
+    const currentSectionSpan = document.getElementById('current-section');
     const prevBtn = document.getElementById('prev-btn');
     const nextBtn = document.getElementById('next-btn');
     
-    if (currentPageSpan) currentPageSpan.textContent = currentPageIndex + 1;
-    if (totalPagesSpan) totalPagesSpan.textContent = pages.length;
+    if (currentPageSpan) currentPageSpan.textContent = currentBlockIndex + 1;
+    if (totalPagesSpan) totalPagesSpan.textContent = blocks.length;
+    if (currentSectionSpan) {
+      currentSectionSpan.textContent = sectionNames[currentBlockIndex] || 'Section';
+    }
     
-    if (prevBtn) prevBtn.disabled = currentPageIndex === 0;
-    if (nextBtn) nextBtn.disabled = currentPageIndex === pages.length - 1;
+    if (prevBtn) prevBtn.disabled = currentBlockIndex === 0;
+    if (nextBtn) nextBtn.disabled = currentBlockIndex >= blocks.length;
   }
 
-  function showPage(pageIndex) {
-    // Hide all blocks
-    blocks.forEach(block => {
-      block.style.display = 'none';
-    });
+  function showBlock(blockIndex) {
+    console.log(`Showing block ${blockIndex + 1} of ${blocks.length}`);
     
-    // Show blocks for current page
-    if (pages[pageIndex]) {
-      pages[pageIndex].forEach(blockIndex => {
-        blocks[blockIndex].style.display = 'block';
-      });
+    // Hide all blocks and end message
+    blocks.forEach(block => block.classList.remove('active'));
+    endMessage.classList.remove('active');
+    
+    // Show current block or end message
+    if (blockIndex < blocks.length) {
+      blocks[blockIndex].classList.add('active');
+    } else {
+      endMessage.classList.add('active');
     }
     
     updateNavigation();
   }
   
-  function nextPage() {
-    if (currentPageIndex < pages.length - 1) {
-      currentPageIndex++;
-      showPage(currentPageIndex);
+  function nextBlock() {
+    console.log('Next block requested');
+    if (currentBlockIndex < blocks.length) {
+      currentBlockIndex++;
+      showBlock(currentBlockIndex);
     }
   }
   
-  function previousPage() {
-    if (currentPageIndex > 0) {
-      currentPageIndex--;
-      showPage(currentPageIndex);
+  function previousBlock() {
+    console.log('Previous block requested');
+    if (currentBlockIndex > 0) {
+      currentBlockIndex--;
+      showBlock(currentBlockIndex);
     }
   }
 
+  // Enhanced keyboard event handling for page turners
   document.addEventListener('keydown', (e) => {
-    console.log('Key pressed:', e.key, 'Code:', e.code); // Debug logging
+    console.log('Key down:', e.key, 'Code:', e.code, 'Which:', e.which);
     
     // Prevent default browser behavior for navigation keys
-    if (['ArrowLeft', 'ArrowRight', 'ArrowUp', 'ArrowDown', 'PageUp', 'PageDown', 'Space'].includes(e.key)) {
+    const navKeys = ['ArrowLeft', 'ArrowRight', 'ArrowUp', 'ArrowDown', 'PageUp', 'PageDown', 'Space'];
+    if (navKeys.includes(e.key)) {
       e.preventDefault();
+      e.stopPropagation();
     }
     
-    // Navigation logic
-    if (e.key === 'PageDown' || e.key === 'ArrowDown' || e.key === 'ArrowRight' || e.key === ' ') {
-      nextPage();
-    } else if (e.key === 'PageUp' || e.key === 'ArrowUp' || e.key === 'ArrowLeft') {
-      previousPage();
+    // Navigation logic - forward
+    if (e.key === 'PageDown' || e.key === 'ArrowDown' || e.key === 'ArrowRight' || 
+        e.key === ' ' || e.which === 34 || e.which === 40 || e.which === 39 || e.which === 32) {
+      nextBlock();
+    }
+    // Navigation logic - backward  
+    else if (e.key === 'PageUp' || e.key === 'ArrowUp' || e.key === 'ArrowLeft' ||
+             e.which === 33 || e.which === 38 || e.which === 37) {
+      previousBlock();
     }
   });
 
-  // Also listen for keyup events (some page turners work better with keyup)
+  // Also handle keyup events (some page turners work on keyup)
   document.addEventListener('keyup', (e) => {
-    console.log('Key released:', e.key, 'Code:', e.code); // Debug logging
+    console.log('Key up:', e.key, 'Code:', e.code, 'Which:', e.which);
     
-    if (['ArrowLeft', 'ArrowRight', 'ArrowUp', 'ArrowDown', 'PageUp', 'PageDown', 'Space'].includes(e.key)) {
+    const navKeys = ['ArrowLeft', 'ArrowRight', 'ArrowUp', 'ArrowDown', 'PageUp', 'PageDown', 'Space'];
+    if (navKeys.includes(e.key)) {
       e.preventDefault();
+      e.stopPropagation();
     }
   });
 
-  // Additional event listeners for page turner compatibility
+  // Handle keypress events
   document.addEventListener('keypress', (e) => {
-    console.log('Key press:', e.key, 'Code:', e.code); // Debug logging
-    e.preventDefault();
+    console.log('Key press:', e.key, 'Code:', e.code, 'Which:', e.which);
+    
+    const navKeys = ['ArrowLeft', 'ArrowRight', 'ArrowUp', 'ArrowDown', 'PageUp', 'PageDown', 'Space'];
+    if (navKeys.includes(e.key) || e.which === 32) {
+      e.preventDefault();
+      e.stopPropagation();
+    }
   });
 
-  // Recalculate pages on window resize
-  window.addEventListener('resize', () => {
-    calculatePages();
-    currentPageIndex = Math.min(currentPageIndex, pages.length - 1);
-    showPage(currentPageIndex);
-  });
-
+  // Initialize - show first block
   window.addEventListener('load', () => {
+    console.log(`Loaded song with ${blocks.length} blocks`);
     if (blocks.length > 0) {
-      calculatePages();
-      showPage(currentPageIndex);
+      showBlock(currentBlockIndex);
     }
   });
 </script>
