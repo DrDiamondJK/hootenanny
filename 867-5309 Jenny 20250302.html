@@ -27,15 +27,13 @@
       margin: 0 auto;
       padding: 0;
     }
-   .song-block {
-  scroll-margin-top: 6em; /* aligns block below sticky header */
-  min-height: 100vh;
-  padding: 2em;
-  box-sizing: border-box;
-  border-bottom: 1px solid #ccc;
-  background: #fafafa;
-}
-
+    .song-block {
+      min-height: 100vh;
+      padding: 2em;
+      box-sizing: border-box;
+      border-bottom: 1px solid #ccc;
+      background: #fafafa;
+    }
     .block-label {
       font-size: 1.3em;
       font-weight: bold;
@@ -100,7 +98,7 @@
   </header>
 
   <div class="chart">
-<div class="song-block"><div class="block-label">Intro</div><pre>[Intro:]
+<div class="song-block"><div class="block-label">Into</div><pre>[Intro:]
 F#m(SS) D(SS) A(SS) B(SS) | F#m(SS) D(SS) A(SS) B(SS)
                                                   Hey! (2nd Beat)
 F#m D A B | F#m D A B
@@ -237,13 +235,16 @@ F#m          D          A       B(SS)
       }
     }
 
-    // JavaScript-driven scroll paging
+    // Smooth scroll paging adjusted for sticky header
     const blocks = Array.from(document.querySelectorAll('.song-block'));
     let currentIndex = 0;
+    const headerOffset = document.querySelector('header')?.offsetHeight || 80;
 
     function scrollToBlock(index) {
       if (index >= 0 && index < blocks.length) {
-        blocks[index].scrollIntoView({ behavior: 'smooth' });
+        const target = blocks[index];
+        const top = target.getBoundingClientRect().top + window.scrollY - headerOffset;
+        window.scrollTo({ top: top, behavior: 'smooth' });
         currentIndex = index;
       }
     }
