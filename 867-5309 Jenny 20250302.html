@@ -6,14 +6,15 @@
   <title>867-5309 Jenny 20250302</title>
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
   <style>
-    html, body {
+    html {
+      scroll-snap-type: y mandatory;
+      scroll-padding-top: 5em;
+    }
+    body {
       margin: 0;
-      padding: 0;
-      height: 100%;
       font-family: 'Roboto Mono', monospace;
       background: #f8f8f8;
     }
-
     header {
       background-color: #3498db;
       color: white;
@@ -24,19 +25,10 @@
       z-index: 1000;
       box-shadow: 0 2px 4px rgba(0,0,0,0.2);
     }
-
-    main {
-      height: 100vh;
-      overflow-y: scroll;
-      scroll-snap-type: y mandatory;
-      scroll-padding-top: 5em;
-    }
-
     .chart {
       max-width: 900px;
       margin: 0 auto;
     }
-
     .song-block {
       scroll-snap-align: start;
       min-height: 100vh;
@@ -47,7 +39,6 @@
       line-height: 1.8;
       font-size: 1.1em;
     }
-
     .block-label {
       font-size: 1.3em;
       font-weight: bold;
@@ -58,7 +49,6 @@
       border-bottom: 2px solid #3498db;
       padding-bottom: 0.5em;
     }
-
     pre {
       margin: 0;
       white-space: pre-wrap;
@@ -66,9 +56,8 @@
       font-size: 1.2em;
       line-height: 1.6;
     }
-
     .chords {
-      display: grid;
+      display: none; /* Hidden by default */
       grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
       gap: 1em;
       justify-items: center;
@@ -76,7 +65,6 @@
       background: white;
       border-top: 1px solid #ddd;
     }
-
     .chord-block {
       text-align: center;
       padding: 0.3em;
@@ -84,7 +72,6 @@
       border-radius: 6px;
       background: #fafafa;
     }
-
     .chord-block img {
       height: 160px;
       width: auto;
@@ -94,7 +81,6 @@
       border: 1px solid #eee;
       border-radius: 4px;
     }
-
     .return-button {
       display: inline-block;
       padding: 0.75em 1.5em;
@@ -106,7 +92,6 @@
       margin: 3em auto 2em;
       text-align: center;
     }
-
     .return-button:hover {
       background-color: #2980b9;
     }
@@ -117,8 +102,7 @@
     <h1>867-5309 Jenny 20250302</h1>
   </header>
 
-  <main>
-    <div class="chart">
+  <div class="chart">
 <div class="song-block"><div class="block-label">Intro</div><pre>[Intro:]
 F#m(SS) D(SS) A(SS) B(SS) | F#m(SS) D(SS) A(SS) B(SS)
                                                   Hey! (2nd Beat)
@@ -229,13 +213,12 @@ F#m          D          A       B
 F#m          D          A       B(SS)
    Eight six seven five three O nine.</pre></div>
 
-      <div style="text-align: center;">
-        <a href="index.html" class="return-button">
-          ← Return to Real Book
-        </a>
-      </div>
+    <div style="text-align: center;">
+      <a href="index.html" class="return-button">
+        ← Return to Real Book
+      </a>
     </div>
-  </main>
+  </div>
 
   <div class="chords" id="chord-diagrams"></div>
 
@@ -245,15 +228,18 @@ F#m          D          A       B(SS)
     if (chartLine) {
       const chords = [...new Set(chartLine[1].trim().split(/\s+/))];
       const container = document.getElementById('chord-diagrams');
-      chords.forEach(chord => {
-        const safeName = chord.replace(/#/g, 'sharp').replace(/\//g, '_');
-        const block = document.createElement('div');
-        block.className = 'chord-block';
-        block.innerHTML = `<div style="font-weight: bold; margin-bottom: 0.3em;">${chord}</div>
-          <img src="${svgDir}/${safeName}_1.svg" alt="${chord} shape 1" onerror="this.style.display='none'">
-          <img src="${svgDir}/${safeName}_2.svg" alt="${chord} shape 2" onerror="this.style.display='none'">`;
-        container.appendChild(block);
-      });
+      if (chords.length) {
+        container.style.display = 'grid';
+        chords.forEach(chord => {
+          const safeName = chord.replace(/#/g, 'sharp').replace(/\//g, '_');
+          const block = document.createElement('div');
+          block.className = 'chord-block';
+          block.innerHTML = `<div style="font-weight: bold; margin-bottom: 0.3em;">${chord}</div>
+            <img src="${svgDir}/${safeName}_1.svg" alt="${chord} shape 1" onerror="this.style.display='none'">
+            <img src="${svgDir}/${safeName}_2.svg" alt="${chord} shape 2" onerror="this.style.display='none'">`;
+          container.appendChild(block);
+        });
+      }
     }
   </script>
 </body>
