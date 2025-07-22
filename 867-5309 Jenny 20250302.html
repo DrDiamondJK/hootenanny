@@ -6,12 +6,9 @@
   <title>867-5309 Jenny 20250302</title>
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
   <style>
-    html {
-      scroll-snap-type: y mandatory;
-      scroll-padding-top: 5em;
-    }
-    body {
+    html, body {
       margin: 0;
+      padding: 0;
       font-family: 'Roboto Mono', monospace;
       background: #f8f8f8;
     }
@@ -28,16 +25,15 @@
     .chart {
       max-width: 900px;
       margin: 0 auto;
+      padding: 0;
     }
     .song-block {
-      scroll-snap-align: start;
       min-height: 100vh;
-      box-sizing: border-box;
       padding: 2em;
-      background: #fafafa;
+      box-sizing: border-box;
       border-bottom: 1px solid #ccc;
-      line-height: 1.8;
-      font-size: 1.1em;
+      background: #fafafa;
+      scroll-margin-top: 5em;
     }
     .block-label {
       font-size: 1.3em;
@@ -56,8 +52,22 @@
       font-size: 1.2em;
       line-height: 1.6;
     }
+    .return-button {
+      display: inline-block;
+      padding: 0.75em 1.5em;
+      background-color: #3498db;
+      color: white;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+      margin: 3em auto 2em;
+      text-align: center;
+    }
+    .return-button:hover {
+      background-color: #2980b9;
+    }
     .chords {
-      display: none; /* Hidden by default */
+      display: none;
       grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
       gap: 1em;
       justify-items: center;
@@ -80,20 +90,6 @@
       margin: 0.3em auto;
       border: 1px solid #eee;
       border-radius: 4px;
-    }
-    .return-button {
-      display: inline-block;
-      padding: 0.75em 1.5em;
-      background-color: #3498db;
-      color: white;
-      border-radius: 6px;
-      text-decoration: none;
-      font-weight: bold;
-      margin: 3em auto 2em;
-      text-align: center;
-    }
-    .return-button:hover {
-      background-color: #2980b9;
     }
   </style>
 </head>
@@ -212,17 +208,15 @@ F#m          D          A       B
    Eight six seven five three O nine.
 F#m          D          A       B(SS)
    Eight six seven five three O nine.</pre></div>
-
     <div style="text-align: center;">
-      <a href="index.html" class="return-button">
-        ← Return to Real Book
-      </a>
+      <a href="index.html" class="return-button">← Return to Real Book</a>
     </div>
   </div>
 
   <div class="chords" id="chord-diagrams"></div>
 
   <script>
+    // Load chord diagrams
     const svgDir = 'svg_chords';
     const chartLine = document.body.innerHTML.match(/<!-- chart: (.+?) -->/);
     if (chartLine) {
@@ -241,6 +235,28 @@ F#m          D          A       B(SS)
         });
       }
     }
+
+    // JavaScript-driven scroll paging
+    const blocks = Array.from(document.querySelectorAll('.song-block'));
+    let currentIndex = 0;
+
+    function scrollToBlock(index) {
+      if (index >= 0 && index < blocks.length) {
+        blocks[index].scrollIntoView({ behavior: 'smooth' });
+        currentIndex = index;
+      }
+    }
+
+    document.addEventListener('keydown', (e) => {
+      const key = e.key;
+      if (['PageDown', 'ArrowDown', ' '].includes(key)) {
+        e.preventDefault();
+        scrollToBlock(currentIndex + 1);
+      } else if (['PageUp', 'ArrowUp'].includes(key)) {
+        e.preventDefault();
+        scrollToBlock(currentIndex - 1);
+      }
+    });
   </script>
 </body>
 </html>
