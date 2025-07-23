@@ -12,27 +12,10 @@
       font-family: 'Roboto Mono', monospace;
       background: #f8f8f8;
     }
-    header {
-      background-color: #3498db;
-      color: white;
-      padding: 1em;
-      text-align: center;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.2);
-    }
-    .chart {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 0;
-    }
-    .song-block {
-      min-height: 100vh;
+    .page {
       padding: 2em;
       box-sizing: border-box;
-      border-bottom: 1px solid #ccc;
-      background: #fafafa;
+      page-break-after: always;
     }
     .block-label {
       font-size: 1.3em;
@@ -51,38 +34,31 @@
       font-size: 1.2em;
       line-height: 1.6;
     }
-    .return-button {
-      display: inline-block;
-      padding: 0.75em 1.5em;
-      background-color: #3498db;
-      color: white;
-      border-radius: 6px;
-      text-decoration: none;
-      font-weight: bold;
-      margin: 3em auto 2em;
-      text-align: center;
-    }
-    .return-button:hover {
-      background-color: #2980b9;
-    }
     .chords {
-      display: none;
-      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-      gap: 1em;
-      justify-items: center;
-      padding: 1em;
+      position: fixed;
+      right: 0;
+      top: 0;
+      width: 25%;
+      height: 100vh;
       background: white;
-      border-top: 1px solid #ddd;
+      border-left: 2px solid #3498db;
+      overflow-y: auto;
+      padding: 1em;
+      box-sizing: border-box;
+    }
+    .main-content {
+      margin-right: 25%;
     }
     .chord-block {
       text-align: center;
-      padding: 0.3em;
-      border: 1px solid #ddd;
+      padding: 0.5em;
+      margin-bottom: 1em;
+      border: 1px solid #ccc;
       border-radius: 6px;
       background: #fafafa;
     }
     .chord-block img {
-      height: 160px;
+      height: 120px;
       width: auto;
       max-width: 100%;
       display: block;
@@ -90,21 +66,39 @@
       border: 1px solid #eee;
       border-radius: 4px;
     }
+    .chord-name {
+      font-weight: bold;
+      margin-top: 0.5em;
+    }
   </style>
 </head>
 <body>
-  <header>
-    <h1>867-5309 Jenny 20250302</h1>
-  </header>
 
-  <div class="chart">
-<div class="song-block"><div class="block-label">Into</div><pre>[Intro:]
+<div class="main-content">
+<div class="page"><div class="block-label">Intro</div><pre>[Intro:]
 F#m(SS) D(SS) A(SS) B(SS) | F#m(SS) D(SS) A(SS) B(SS)
                                                   Hey! (2nd Beat)
 F#m D A B | F#m D A B
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </pre></div>
 
-<div class="song-block"><div class="block-label">Verse</div><pre>F#m       D      A         B       F#m  D  A  B
+<div class="page"><div class="block-label">Verse</div><pre>F#m       D      A         B       F#m  D  A  B
    Jenny, Jenny, who can I turn to?  
 F#m            D         A          B    F#m  D  A  B
    You give me something I can hold on to.  
@@ -112,9 +106,22 @@ F#m           D         A        B         F#m  D  A  B
    I know you think I'm like the others be-fore  
 F#m             D        A      B      F#m  D  A  B
    Who saw your name and number on the wall.
+
+
+
+
+
+
+
+
+
+
+
+
+
 </pre></div>
 
-<div class="song-block"><div class="block-label">Chorus</div><pre>E         D        A
+<div class="page"><div class="block-label">Chorus</div><pre>E         D        A
  Jenny, I got your number;
 E          A        D
  I need to make you mine.
@@ -129,9 +136,15 @@ F#m          D          A       B
    Eight six seven five three O nine.
 F#m          D          A       B 
    Eight six seven five three O nine.
+
+
+
+
+
+
 </pre></div>
 
-<div class="song-block"><div class="block-label">Verse</div><pre>F#m       D      A               B     F#m  D  A  B
+<div class="page"><div class="block-label">Verse</div><pre>F#m       D      A               B     F#m  D  A  B
    Jenny, Jenny, you're the girl for me.  
 F#m          D               A          B    F#m  D  A  B
    You don't know me but you make me so happy.  
@@ -139,9 +152,22 @@ F#m           D           A          B       F#m  D  A  B
    I tried to call you be-fore but I lost my nerve.     (I)
         F#m       D       A     B         F#m  D  A  B
 I tried my i-magi-nation,   but I was dis-turbed.  
+
+
+
+
+
+
+
+
+
+
+
+
+
 </pre></div>
 
-<div class="song-block"><div class="block-label">Chorus</div><pre>E         D        A
+<div class="page"><div class="block-label">Chorus</div><pre>E         D        A
  Jenny, I got your number;
 E          A        D
  I need to make you mine.
@@ -157,9 +183,14 @@ F#m          D          A       B
 F#m          D          A       B      (C#m)
    Eight six seven five three O nine.
 
+
+
+
+
+
 </pre></div>
 
-<div class="song-block"><div class="block-label">Bridge</div><pre>C#m          E
+<div class="page"><div class="block-label">Bridge</div><pre>C#m          E
    I got it,   I got it.
 F#m           A              B
    I got your number off the wall.
@@ -171,9 +202,18 @@ F#m                       A         B
 F#m(SS) D(SS) A(SS) B(SS) | F#m(SS) D(SS) A(SS) B(SS)
                                                   Hey! (2nd Beat)
 F#m D A B | F#m D A B | (E)
+
+
+
+
+
+
+
+
+
 </pre></div>
 
-<div class="song-block"><div class="block-label">Chorus</div><pre>E             D           A
+<div class="page"><div class="block-label">Chorus</div><pre>E             D           A
  Jenny, don't change your number,
 E          A        D
  I need to make you mine.
@@ -188,9 +228,15 @@ F#m          D          A       B
    Eight six seven five three O nine.
 F#m          D          A       B
    Eight six seven five three O nine.
+
+
+
+
+
+
 </pre></div>
 
-<div class="song-block"><div class="block-label">Chorus</div><pre>F#m       D      A         B       
+<div class="page"><div class="block-label">Chorus</div><pre>F#m       D      A         B       
    Jenny, Jenny, who can I turn to?  
 F#m          D          A       B   
    Eight six seven five three O nine.
@@ -206,59 +252,37 @@ F#m          D          A       B
 F#m          D          A       B
    Eight six seven five three O nine.
 F#m          D          A       B(SS)
-   Eight six seven five three O nine.</pre></div>
-    <div style="text-align: center;">
-      <a href="index.html" class="return-button">← Return to Real Book</a>
-    </div>
-  </div>
+   Eight six seven five three O nine.
 
-  <div class="chords" id="chord-diagrams"></div>
 
-  <script>
-    // Load chord diagrams
-    const svgDir = 'svg_chords';
-    const chartLine = document.body.innerHTML.match(/<!-- chart: (.+?) -->/);
-    if (chartLine) {
-      const chords = [...new Set(chartLine[1].trim().split(/\s+/))];
-      const container = document.getElementById('chord-diagrams');
-      if (chords.length) {
-        container.style.display = 'grid';
-        chords.forEach(chord => {
-          const safeName = chord.replace(/#/g, 'sharp').replace(/\//g, '_');
-          const block = document.createElement('div');
-          block.className = 'chord-block';
-          block.innerHTML = `<div style="font-weight: bold; margin-bottom: 0.3em;">${chord}</div>
-            <img src="${svgDir}/${safeName}_1.svg" alt="${chord} shape 1" onerror="this.style.display='none'">
-            <img src="${svgDir}/${safeName}_2.svg" alt="${chord} shape 2" onerror="this.style.display='none'">`;
-          container.appendChild(block);
-        });
-      }
-    }
 
-    // Smooth scroll paging adjusted for sticky header
-    const blocks = Array.from(document.querySelectorAll('.song-block'));
-    let currentIndex = 0;
-    const headerOffset = document.querySelector('header')?.offsetHeight || 80;
 
-    function scrollToBlock(index) {
-      if (index >= 0 && index < blocks.length) {
-        const target = blocks[index];
-        const top = target.getBoundingClientRect().top + window.scrollY - headerOffset;
-        window.scrollTo({ top: top, behavior: 'smooth' });
-        currentIndex = index;
-      }
-    }
+</pre></div>
+</div>
 
-    document.addEventListener('keydown', (e) => {
-      const key = e.key;
-      if (['PageDown', 'ArrowDown', ' '].includes(key)) {
-        e.preventDefault();
-        scrollToBlock(currentIndex + 1);
-      } else if (['PageUp', 'ArrowUp'].includes(key)) {
-        e.preventDefault();
-        scrollToBlock(currentIndex - 1);
-      }
-    });
-  </script>
+<div class="chords">
+  <h3>Chords</h3>
+<div class="chord-block">
+  <img src="svg_chords/D.svg" alt="D" onerror="this.style.display='none'">
+  <div class="chord-name">D</div>
+</div>
+<div class="chord-block">
+  <img src="svg_chords/A.svg" alt="A" onerror="this.style.display='none'">
+  <div class="chord-name">A</div>
+</div>
+<div class="chord-block">
+  <img src="svg_chords/Fsharpm.svg" alt="F#m" onerror="this.style.display='none'">
+  <div class="chord-name">F#m</div>
+</div>
+<div class="chord-block">
+  <img src="svg_chords/E.svg" alt="E" onerror="this.style.display='none'">
+  <div class="chord-name">E</div>
+</div>
+<div class="chord-block">
+  <img src="svg_chords/B.svg" alt="B" onerror="this.style.display='none'">
+  <div class="chord-name">B</div>
+</div>
+</div>
+
 </body>
 </html>
