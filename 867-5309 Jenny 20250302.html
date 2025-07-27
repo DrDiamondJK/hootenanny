@@ -20,6 +20,7 @@
       page-break-after: always;
       white-space: pre;
       overflow: hidden;
+      min-height: 100vh;
     }
     .block-label {
       font-weight: bold;
@@ -80,9 +81,24 @@
       margin-top: 0.5em;
       font-size: 0.9em;
     }
+    
+    /* Navigation indicator */
+    .nav-indicator {
+      position: fixed;
+      top: 10px;
+      left: 10px;
+      background: rgba(0,0,0,0.7);
+      color: white;
+      padding: 5px 10px;
+      border-radius: 4px;
+      font-size: 14px;
+      z-index: 1000;
+    }
   </style>
 </head>
 <body>
+
+<div class="nav-indicator" id="navIndicator">Section 1 of 7</div>
 
 <div class="main-content">
 <div class="page"><div class="block-label">Verse</div><pre>[Intro:]
@@ -334,6 +350,80 @@ F#m          D          A       B(SS)
   </div>
 </div>
 </div>
+
+<script>
+let currentSection = 0;
+const sections = document.querySelectorAll('.page');
+const totalSections = sections.length;
+const navIndicator = document.getElementById('navIndicator');
+
+// Update the navigation indicator
+function updateNavIndicator() {
+    const sectionLabel = sections[currentSection].querySelector('.block-label').textContent;
+    navIndicator.textContent = `${sectionLabel} (${currentSection + 1} of ${totalSections})`;
+}
+
+// Navigate to specific section
+function navigateToSection(sectionIndex) {
+    if (sectionIndex >= 0 && sectionIndex < totalSections) {
+        currentSection = sectionIndex;
+        sections[currentSection].scrollIntoView({ 
+            behavior: 'instant', 
+            block: 'start' 
+        });
+        updateNavIndicator();
+    }
+}
+
+// Handle keyboard navigation
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'PageDown' || e.key === 'ArrowDown') {
+        e.preventDefault();
+        if (currentSection < totalSections - 1) {
+            navigateToSection(currentSection + 1);
+        }
+    } else if (e.key === 'PageUp' || e.key === 'ArrowUp') {
+        e.preventDefault();
+        if (currentSection > 0) {
+            navigateToSection(currentSection - 1);
+        }
+    } else if (e.key >= '1' && e.key <= '9') {
+        // Allow jumping to sections 1-9 directly
+        const sectionNum = parseInt(e.key) - 1;
+        if (sectionNum < totalSections) {
+            navigateToSection(sectionNum);
+        }
+    }
+});
+
+// Initialize
+updateNavIndicator();
+
+// Optional: Add touch/swipe support for mobile testing
+let touchStartY = 0;
+document.addEventListener('touchstart', (e) => {
+    touchStartY = e.touches[0].clientY;
+});
+
+document.addEventListener('touchend', (e) => {
+    const touchEndY = e.changedTouches[0].clientY;
+    const diff = touchStartY - touchEndY;
+    
+    if (Math.abs(diff) > 50) { // Minimum swipe distance
+        if (diff > 0) {
+            // Swipe up - next section
+            if (currentSection < totalSections - 1) {
+                navigateToSection(currentSection + 1);
+            }
+        } else {
+            // Swipe down - previous section
+            if (currentSection > 0) {
+                navigateToSection(currentSection - 1);
+            }
+        }
+    }
+});
+</script>
 
 </body>
 </html>
